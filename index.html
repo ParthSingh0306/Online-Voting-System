@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style1.css" />
+    <style>
+            body {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        /* background-color: red; */
+        font-family: cursive;
+      }
+      /* 4bcffa */
+
+      #headerSection {
+        padding: 5px;
+      }
+
+      #headerSection h1 {
+        font-family: cursive;
+      }
+
+      input {
+        border-radius: 25px;
+        padding: 6px;
+        border: none;
+        outline: none;
+      }
+
+      #dropbox {
+        padding: 6px;
+        border-radius: 25px;
+        width: 175px;
+        border: none;
+        outline: none;
+      }
+
+      #login-button {
+        padding: 6px;
+        border-radius: 25px;
+        width: 175px;
+        border: none;
+        outline: none;
+      }
+
+      #login-button:hover {
+        background-color: #ff9f43;
+        color: white;
+      }
+      body {
+        background-image: url("images/Election_Header.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 55px;
+      }
+      input {
+        width: 300px;
+      }
+      #dropbox {
+        width: 310px;
+      }
+      #login-button {
+        width: 150px;
+      }
+      #bottom-section a {
+        text-decoration: none;
+      }
+      #bodysection {
+        font-family: cursive;
+        position: relative;
+        top: 55px;
+        left: 220px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 15px;
+        width: 350px;
+        color: white;
+        background-color: #7f64c1;
+      }
+      #headerSection {
+        background-color: orange;
+        color: white;
+        padding: 5px;
+      }
+
+      #headerSection h1 {
+        font-family: cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainbody">
+      <div id="headerSection">
+        <h1>Online Voting System</h1>
+      </div>
+      <!-- <hr> -->
+
+      <div id="bodysection">
+        <form action="api/login.php" method="post">
+          <h3>Login</h3>
+          <input
+            type="number"
+            name="mobile"
+            required
+            placeholder="Enter mobile.."
+          /><br /><br />
+          <input
+            type="password"
+            name="password"
+            required
+            placeholder="Enter Password.."
+          /><br /><br />
+          <select name="role" id="dropbox" required>
+            <option value="1">Voter</option>
+            <option value="2">Group</option></select
+          ><br /><br />
+          <button id="login-button">Login</button>
+          <input type="reset" id="login-button" value="Reset" /><br /><br />
+        </form>
+        <div id="bottom-section">
+          New User? <a href="./routes/register.html">Register here</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

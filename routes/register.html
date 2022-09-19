@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="../css/style1.css" />
+  </head>
+  <style>
+    body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    /* background-color: red; */
+    font-family: cursive;
+}
+/* 4bcffa */
+
+#headerSection{
+    padding: 5px;
+}
+
+#headerSection h1{
+    font-family: cursive;
+}
+
+input{
+    border-radius: 25px;
+    padding: 6px;
+    border: none;
+    outline: none;
+}
+
+#dropbox{
+    padding: 6px;
+    border-radius: 25px;
+    width: 175px;
+    border: none;
+    outline: none;
+}
+
+#login-button{
+    padding: 6px;
+    border-radius: 25px;
+    width: 175px;
+    border: none;
+    outline: none;
+}
+
+#login-button:hover{
+    background-color: #ff9f43;
+    color:white;
+}
+    #mid-section {
+      font-family: cursive;
+      position: relative;
+      top: 45px;
+      left: 760px;
+      /* right: 200px; */
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 15px;
+      width: 400px;
+      background-color: #7f64c1;
+    }
+
+    /* body{
+        background-image: url("images/hand-vote3.jpg");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-x: 75px;
+        background-position-y: 100px;
+    } */
+
+    #headerSection {
+      padding: 5px;
+    }
+
+    #headerSection h1 {
+      font-family: cursive;
+    }
+
+    input {
+      border-radius: 25px;
+      padding: 6px;
+      border: none;
+      outline: none;
+    }
+
+    #dropbox {
+      padding: 6px;
+      border-radius: 25px;
+      width: 175px;
+      border: none;
+      outline: none;
+    }
+
+    #login-button {
+      padding: 6px;
+      border-radius: 25px;
+      width: 160px;
+      border: none;
+      outline: none;
+    }
+
+    #login-button:hover {
+      background-color: #ff9f43;
+      color: white;
+    }
+
+    .reg-input {
+      width: 320px;
+    }
+    #reg-file {
+      position: relative;
+      left: 45px;
+    }
+  </style>
+  <body>
+    <div style="background-color: orange; color:white; padding: 5px;">
+      <h1>Online Voting System</h1>
+    </div>
+
+    <div style="display: flex; ">
+        <div style="width: 100px;">
+            <img src="../images/hand-vote3.jpg" style="width: 900px; height:550px;">
+        </div>
+    
+        <div id="mid-section">
+          <form
+            action="../api/register.php"
+            method="POST"
+            enctype="multipart/form-data"
+            style="color: white;"
+          >
+            <h3 style="color: white;">Registration</h3>
+            <input
+              class="reg-input"
+              type="text"
+              name="name"
+              required
+              placeholder="Enter name.."
+            /><br /><br />
+            <input
+              class="reg-input"
+              type="number"
+              name="mobile"
+              required
+              placeholder="Enter mobile.."
+            /><br /><br />
+            <input
+              class="reg-input"
+              type="password"
+              name="password"
+              required
+              placeholder="Enter Password.."
+            /><br /><br />
+            <input
+              class="reg-input"
+              type="password"
+              name="cpassword"
+              required
+              placeholder="Confirm Password.."
+            /><br /><br />
+            <input
+              class="reg-input"
+              type="text"
+              name="address"
+              placeholder="Address"
+            /><br /><br />
+            <div id="reg-file">
+              Upload Image: <input type="file" name="photo" required /><br /><br />
+            </div>
+            Select Role:
+            <select name="role" id="dropbox" required>
+              <option value="1">Voter</option>
+              <option value="2">Group</option></select
+            ><br /><br />
+            <button id="login-button">Register</button>
+            <input type="reset" id="login-button" value="Reset" /><br /><br />
+          </form>
+          <div style="text-decoration: none; color: white;">
+            Already User? <a href="../index.html" style="text-decoration: none;">Login Here</a>
+          </div>
+        </div>
+    </div>
+
+  </body>
+</html>
